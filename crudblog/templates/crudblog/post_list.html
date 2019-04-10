@@ -103,9 +103,19 @@
              ...to be continued.</p>
 
              <hr>
+         </div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
 
-</div>
+<hr>
+
 
     <base href="https://ineo.pythonanywhere.com/" />
     <script type="text/JavaScript">
